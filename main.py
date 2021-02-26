@@ -1,15 +1,8 @@
-world = [
-  ["","",""],
-  ["","",""],
-  ["","",""]
-  ]
-#print(world)
-
 world_map = {
   51:"T", 52:"N", 53:"N", 54:"N", 55:"T",
   41:"N", 42:"N", 43:"H", 44:"N", 45:"T",
   31:"H", 32:"T", 33:"C", 34:"N", 35:"N",
-  21:"N", 22:"T", 23:"X", 24:"N", 25:"N",
+  21:"N", 22:"T", 23:"T", 24:"N", 25:"N",
   11:"T", 12:"T", 13:"T", 14:"H", 15:"N"
 }
 #print(world_map.keys())
@@ -26,8 +19,12 @@ while True:
   try:
     print(f"You are at: {world_map[player_location]}")
   except KeyError:
-    print("YOU ARE IN THE VOID! GO BACK!")
+    print("YOU\'RE IN THE VOID - GO BACK!")
+  
   walk_direction = input("Enter direction --> ").upper()
+  while walk_direction not in ["N","E","S","W"]:
+    walk_direction = input("Enter direction --> ").upper()
+  
   if walk_direction == "N":
     player_location += 10
   elif walk_direction == "E":
