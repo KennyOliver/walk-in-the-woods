@@ -7,7 +7,7 @@ world_map = {
 }
 #print(world_map.keys())
 
-compass = "  N\nW + E\n  S"
+compass = "/ N \ \nW + E\n\ S /"
 print("<-- Walk In The Woods -->")
 print("<-- Info -->\nC = center\nT = tree\nH = house\n0 = nothing")
 
@@ -18,7 +18,6 @@ while True:
     print(f"You\'re at:\t{world_map[player_location]}")
   except KeyError:
     print("YOU\'RE IN THE VOID - GO BACK!") '''
-  
   try:
     display_location = world_map[player_location]
   except KeyError:
@@ -40,8 +39,8 @@ while True:
   except KeyError:
     west_object = "V"
   #adjacent_objects = f"  {world_map[player_location + 10]}\n{world_map[player_location - 1]} {world_map[player_location]} {world_map[player_location + 1]}\n  {world_map[player_location - 10]}"
-  adjacent_objects = f"  {north_object}\n{west_object} {display_location} {east_object}\n  {south_object}"
-  print("-" * 30)
+  adjacent_objects = f"? {north_object} ?\n{west_object} {display_location} {east_object}\n? {south_object} ?"
+  print("-" * 20)
   print(compass)
   print("\n")
   print(adjacent_objects)
