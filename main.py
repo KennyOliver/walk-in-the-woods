@@ -7,12 +7,12 @@ world_map = {
 }
 #print(world_map.keys())
 
-print("Proof of Concept!")
+print("<-- Walk In The Woods -->")
 
 compass = "  N\nW + E\n  S"
 player_location = 33 #initial location (i.e. spawn point)
 
-print("Info: C = center; T = tree; H = house; N = nothing")
+print("<-- Info -->\nC = center\nT = tree\nH = house\nN = nothing")
 
 while True:
   print(compass)
@@ -20,6 +20,22 @@ while True:
     print(f"You are at: {world_map[player_location]}")
   except KeyError:
     print("YOU\'RE IN THE VOID - GO BACK!")
+  try:
+    print(f"North is: {world_map[player_location + 10]}")
+  except KeyError:
+    print("N: VOID!")
+  try:
+    print(f"South is: {world_map[player_location - 10]}")
+  except KeyError:
+    print("S: VOID!")
+  try:
+    print(f"East is: {world_map[player_location + 1]}")
+  except KeyError:
+    print("E: VOID!")
+  try:
+    print(f"West is: {world_map[player_location - 1]}")
+  except KeyError:
+    print("W: VOID!")
   
   walk_direction = input("Enter direction --> ").upper()
   while walk_direction not in ["N","E","S","W"]:
