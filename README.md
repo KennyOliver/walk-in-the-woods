@@ -1,4 +1,4 @@
-# walk-in-the-woods :deciduous_tree: :house_with_garden: :evergreen_tree: :mountain:
+# walk-in-the-woods :national_park:
 
 ![image](https://www.codefactor.io/repository/github/KennyOliver/walk-in-the-woods/badge?style=for-the-badge)
 
