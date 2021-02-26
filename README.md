@@ -4,7 +4,7 @@
 
 [![](https://repl.it/badge/github/KennyOliver/walk-in-the-woods)](https://repl.it/@KennyOliver/walk-in-the-woods)
 
-Extremely simple, proof of concept, program where you can navigate a world map made from a dictionary!
+A simple, proof of concept, program where you can navigate a world map made from a dictionary!
 
 ---
 Kenny Oliver ©2021
