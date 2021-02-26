@@ -14,10 +14,6 @@ print("<-- Info -->\nC = center\nT = tree\nH = house\n0 = nothing")
 player_location = 33 #initial location (i.e. spawn point)
 
 while True:
-  ''' try:
-    print(f"You\'re at:\t{world_map[player_location]}")
-  except KeyError:
-    print("YOU\'RE IN THE VOID - GO BACK!") '''
   try:
     display_location = world_map[player_location]
   except KeyError:
@@ -38,11 +34,11 @@ while True:
     west_object = world_map[player_location - 1]
   except KeyError:
     west_object = "V"
-  #adjacent_objects = f"  {world_map[player_location + 10]}\n{world_map[player_location - 1]} {world_map[player_location]} {world_map[player_location + 1]}\n  {world_map[player_location - 10]}"
-  adjacent_objects = f"? {north_object} ?\n{west_object} {display_location} {east_object}\n? {south_object} ?"
+  
+  adjacent_objects = f"* {north_object} *\n{west_object} {display_location} {east_object}\n* {south_object} *"
   print("-" * 20)
   print(compass)
-  print("\n")
+  print("-" * 5)
   print(adjacent_objects)
   
   walk_direction = input("Go --> ").upper()
