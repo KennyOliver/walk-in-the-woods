@@ -23,7 +23,10 @@ print("Info: C = center; T = tree; H = house; N = nothing")
 
 while True:
   print(compass)
-  print(f"You are at: {world_map[player_location]}")
+  try:
+    print(f"You are at: {world_map[player_location]}")
+  except KeyError:
+    print("YOU ARE IN THE VOID! GO BACK!")
   walk_direction = input("Enter direction --> ").upper()
   if walk_direction == "N":
     player_location += 10
