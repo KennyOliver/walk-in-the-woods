@@ -58,5 +58,5 @@ while True:
   elif walk_direction == "W":
     player_location -= 1
   
-  print ("\033[A\033[A" * 3)
+  print ("\033[A\033[A" * 3) #clear previous lines
   #print ("\033[A                             \033[A")
