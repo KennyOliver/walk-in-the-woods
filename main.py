@@ -11,6 +11,7 @@ world_map = {
 
 compass = "/ N \ \nW + E\n\ S /"
 print("<-- Walk In The Woods -->")
+print("A 7x7 world made from a dictionary!")
 print("<-- Info -->\nS = spawn point\nT = tree\nW = water\nH = house\nM = mountain\n0 = nothing")
 
 player_location = 44 #initial location (i.e. spawn point)
@@ -31,8 +32,8 @@ while True:
   
   walk_direction = input("Go --> ").upper()
   while walk_direction not in ["N","E","S","W"]:
-    walk_direction = input("Enter compass direction --> ").upper()
-    print ("\033[A\033[A")
+    walk_direction = input("Invalid --> ").upper()
+    print("\033[A                             \033[A") #clear previous line
   
   if walk_direction == "N":
     player_location += 10
@@ -43,5 +44,10 @@ while True:
   elif walk_direction == "W":
     player_location -= 1
   
-  print ("\033[A\033[A" * 3) #clear previous lines
-  #print ("\033[A                             \033[A")
+  #print("\033[A\033[A" * 3)
+  print("\033[A                             \033[A") #clear previous lines
+  print("\033[A                             \033[A") #space necessary to remove previous input from console
+  print("\033[A                             \033[A")
+  print("\033[A                             \033[A")
+  print("\033[A                             \033[A")
+  #print("\033[A                             \033[A")
