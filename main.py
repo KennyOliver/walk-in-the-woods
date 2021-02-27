@@ -41,13 +41,13 @@ while True:
     west_object = "V"
   
   adjacent_objects = f"* {north_object} *\n{west_object} {display_location} {east_object}\n* {south_object} *"
-  print("-" * 5)
+  print("-" * 20)
   print(adjacent_objects)
   
   walk_direction = input("Go --> ").upper()
   while walk_direction not in ["N","E","S","W"]:
     walk_direction = input("Enter compass direction --> ").upper()
-    print ("\033[A                             \033[A")
+    print ("\033[A\033[A")
   
   if walk_direction == "N":
     player_location += 10
@@ -58,8 +58,5 @@ while True:
   elif walk_direction == "W":
     player_location -= 1
   
-  print ("\033[A                             \033[A")
-  print ("\033[A                             \033[A")
-  print ("\033[A                             \033[A")
-  print ("\033[A                             \033[A")
-  print ("\033[A                             \033[A")
+  print ("\033[A\033[A" * 3)
+  #print ("\033[A                             \033[A")
