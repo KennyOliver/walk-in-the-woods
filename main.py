@@ -19,26 +19,11 @@ print("-" * 20)
 print(compass)
 
 while True:
-  try:
-    display_location = world_map[player_location]
-  except KeyError:
-    display_location = "V"
-  try:
-    north_object = world_map[player_location + 10]
-  except KeyError:
-    north_object = "V"
-  try:
-    east_object = world_map[player_location + 1]
-  except KeyError:
-    east_object = "V"
-  try:
-    south_object = world_map[player_location - 10]
-  except KeyError:
-    south_object = "V"
-  try:
-    west_object = world_map[player_location - 1]
-  except KeyError:
-    west_object = "V"
+  display_location = world_map.get(player_location, "V")
+  north_object = world_map.get(player_location + 10, "V")
+  east_object = world_map.get(player_location + 1, "V")
+  south_object = world_map.get(player_location - 10, "V")
+  west_object = world_map.get(player_location - 1, "V")
   
   adjacent_objects = f"* {north_object} *\n{west_object} {display_location} {east_object}\n* {south_object} *"
   print("-" * 20)
