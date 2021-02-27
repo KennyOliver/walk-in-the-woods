@@ -47,6 +47,7 @@ while True:
   walk_direction = input("Go --> ").upper()
   while walk_direction not in ["N","E","S","W"]:
     walk_direction = input("Enter compass direction --> ").upper()
+    print ("\033[A                             \033[A")
   
   if walk_direction == "N":
     player_location += 10
