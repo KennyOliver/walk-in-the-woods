@@ -15,6 +15,9 @@ print("<-- Info -->\nS = spawn point\nT = tree\nW = water\nH = house\nM = mounta
 
 player_location = 44 #initial location (i.e. spawn point)
 
+print("-" * 20)
+print(compass)
+
 while True:
   try:
     display_location = world_map[player_location]
@@ -38,8 +41,6 @@ while True:
     west_object = "V"
   
   adjacent_objects = f"* {north_object} *\n{west_object} {display_location} {east_object}\n* {south_object} *"
-  print("-" * 20)
-  print(compass)
   print("-" * 5)
   print(adjacent_objects)
   
@@ -55,3 +56,9 @@ while True:
     player_location -= 10
   elif walk_direction == "W":
     player_location -= 1
+  
+  print ("\033[A                             \033[A")
+  print ("\033[A                             \033[A")
+  print ("\033[A                             \033[A")
+  print ("\033[A                             \033[A")
+  print ("\033[A                             \033[A")
