@@ -1,20 +1,21 @@
 world_map = {
-  71:"T", 72:"T", 73:"H", 74:"T", 75:"T", 76:"W", 77:"W",
-  61:"T", 62:"T", 63:"T", 64:"H", 65:"T", 66:"T", 67:"W",
-  51:"T", 52:"T", 53:"W", 54:"T", 55:"M", 56:"T", 57:"W",
-  41:"W", 42:"W", 43:"H", 44:"$", 45:"T", 46:"M", 47:"M",
-  31:"W", 32:"W", 33:"W", 34:"H", 35:"T", 36:"M", 37:"H",
-  21:"H", 22:"W", 23:"W", 24:"W", 25:"H", 26:"T", 27:"H",
-  11:"T", 12:"T", 13:"T", 14:"H", 15:"H", 16:"H", 17:"T"
+  71:"░", 72:"░", 73:"■", 74:"░", 75:"░", 76:"▒", 77:"▒",
+  61:"░", 62:"░", 63:"░", 64:"■", 65:"░", 66:"░", 67:"▒",
+  51:"░", 52:"░", 53:"▒", 54:"▒", 55:"Λ", 56:"░", 57:"▒",
+  41:"▒", 42:"▒", 43:"■", 44:"$", 45:"▒", 46:"Λ", 47:"Λ",
+  31:"▒", 32:"▒", 33:"▒", 34:"■", 35:"▒", 36:"Λ", 37:"■",
+  21:"■", 22:"▒", 23:"▒", 24:"▒", 25:"■", 26:"▒", 27:"■",
+  11:"▒", 12:"▒", 13:"▒", 14:"■", 15:"■", 16:"■", 17:"▒"
 }
 #print(world_map.keys())
 
-compass = "/ N \ \nW + E\n\ S /"
+compass = "╔ N ╗ \nW + E\n╚ S ╝"
 print("<-- Walk In The Woods -->")
-print("A 7x7 world made from a dictionary!")
-print("<-- Info -->\n$ = spawn point\nT = tree\nW = water\nH = house\nM = mountain")
+print("A 7x7 world made from a dictionary!\nYou have an aerial view")
+print("<-- Info -->")
+print("$ = spawn-point\n▒ = tree\n░ = water\n■ = house\nΛ = mountain")
 
-player_location = 44 #initial location (i.e. spawn point)
+player_location = 44 #spawn-point
 
 print("-" * 20)
 print(compass)
