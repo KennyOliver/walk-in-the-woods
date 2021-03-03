@@ -1,6 +1,7 @@
 # walk-in-the-woods :national_park:
 
 ![image](https://www.codefactor.io/repository/github/KennyOliver/walk-in-the-woods/badge?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/KennyOliver/walk-in-the-woods?style=for-the-badge)
 
 [![](https://repl.it/badge/github/KennyOliver/walk-in-the-woods)](https://repl.it/@KennyOliver/walk-in-the-woods)
 
